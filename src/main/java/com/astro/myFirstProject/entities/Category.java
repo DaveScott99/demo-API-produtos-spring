@@ -38,6 +38,10 @@ public class Category implements Serializable {
 		this.name = name;
 	}
 	
+	public List<Product> getProducts() {
+		return products;
+	}
+	
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);
@@ -53,10 +57,6 @@ public class Category implements Serializable {
 			return false;
 		Category other = (Category) obj;
 		return Objects.equals(id, other.id);
-	}
-
-	public List<Product> getProducts() {
-		return products;
 	}
 
 }
